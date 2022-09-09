@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-import sys
+from sys import argv
 from calculator_1 import add, sub, mul, div
 if __name__ == "__main__":
-    numArgv = len(sys.argv)
+    numArgv = len(argv)
     if numArgv != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit("1")
     else:
-        a = int(sys.argv[1])
-        sign = sys.argv[2]
-        b = int(sys.argv[3])
+        a = int(argv[1])
+        sign = argv[2]
+        b = int(argv[3])
         if sign == '+':
             calcul = add(a, b)
             print("{} + {} = {}".format(a, b, add(a, b)))
