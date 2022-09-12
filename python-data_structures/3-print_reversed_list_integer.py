@@ -1,9 +1,14 @@
 #!/usr/bin/python3
+import numbers
+
+
 def print_reversed_list_integer(my_list=[]):
     if (my_list is None):
         return
     else:
-        i = len(my_list)
-        while (i > 0):
-            print("{:d}".format(i))
-            i -= 1
+        list = my_list[::-1]
+        for i in list:
+            if i in range(0, 10):
+                print("{:d}".format(i))
+            else:
+                break
