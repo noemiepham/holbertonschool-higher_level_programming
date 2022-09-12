@@ -239,9 +239,77 @@ Avg = 5.333333333333333
 
 ### When to use tuples versus lists
 ### What is a sequence
+
+A sequence is a positionally ordered collection of items. And you can refer to any item in the sequence by using its index number e.g., s[0] and s[1].
+
+In Python, the sequence index starts at 0, not 1. So the first element is s[0] and the second element is s[1]. If the sequence s has n items, the last item is s[n-1].
+
+Python has the following built-in sequence types: lists, bytearrays, strings, tuples, range, and bytes. Python classifies sequence types as mutable and immutable.
+
 ### What is tuple packing
+
+In packing, we place value into a new tuple while in unpacking we extract those values back into variables.
+
+```  
+#!/usr/bin/python3
+x = ("Guru99", 20, "Education")    # tuple packing
+(company, emp, profile) = x    # tuple unpacking
+print(x) // ("Guru99", 20, "Education") 
+print(company) // Guru99
+print(emp) // 20
+print(profile) // Education
+
+```
+###### Unpacking Tuples
+Unpacking a tuple allows us to extract the tuple elements and assign them to named variables. Let’s try it:
+``` 
+first_name, last_name, age = customers[2]
+print(first_name, last_name, ',', age, 'years old')
+Mehdi Lotfinejad , 39 years old
+``` 
+
 ### What is sequence unpacking
+
+Sequence unpacking in python allows you to take objects in a collection and store them in variables for later use. This is particularly useful when a function or method returns a sequence of objects.
+```  
+>>> new_run = ['09/01/2020', '10:00', 60, 6, 100]
+
+We can unpack this list with appropriately named variables by assignment:
+
+>>> date, pace, time, distance, elevation = new_run 
+
+We can then print the values for these variables to validate that the assignments were correct:
+
+$ print("Date: ", date)
+$ print("Pace: ", pace, 'min')
+$ print("Time: ", time, 'min')
+$ print("Distance: ", distance, 'miles')
+$ print("Elevation: ", elevation, 'feet')
+
+Date: 09/01/2022
+Pade: 10:00 min
+....
+```  
 ### What is the del statement and how to use it
+
+In Python, the del keyword is generally used to delete an object. 
+
+Since everything in Python represents some kind of object, the del keyword can also be used to delete lists, variables, parts of a list, etc.
+
+The del statement does not return any type of value.
+
+``` 
+a = 13  
+b = 5  
+c = a + b + 13 - 1 + 5  
+print(c)   // 35
+  
+# delete the c variables  
+del c  
+  
+# print c variable after delete  
+print(c)  // NameError: name 'c' is not defined
+``` 
 
 ## Reference
 - [w3schools](https://www.w3schools.com/python/ref_list_append.asp)
