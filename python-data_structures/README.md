@@ -137,7 +137,42 @@ the_list[::-1] # will also return [3,2,1]
 
 
 ### How to use lists as stacks and queues
+##### Stack:  
+
+Stack works on the principle of “Last-in, first-out” (LIFO).
+
+To add an item to the top of the list, i.e., to push an item, we use append() function and to pop out an element we use pop() function
+```
+>>> spring_fruits = ['Apricot', 'Avocado', 'Kiwi', 'Grapefruit', 'Cherry']
+>>> spring_fruits.append('Strawberry')
+>>> print(spring_fruits)
+['Apricot', 'Avocado', 'Kiwi', 'Grapefruit', 'Cherry','Strawberry' ]
+>>> spring_fruits.pop()
+>>> print(spring_fruits)
+['Apricot', 'Avocado', 'Kiwi', 'Grapefruit', 'Cherry']
+``` 
+###### Queue
+Works on the principle of “First-in, first-out”.(FIFO)
+
+Below is list implementation of queue. We use pop(0) to remove the first item from a list
+```
+from collections import deque
+queue=deque([1,2,3])
+#adds elements to the end of list
+queue.append(4)
+print (queue)#Output:deque([1, 2, 3, 4])
+queue.append(5)
+print (queue)#Output:deque([1, 2, 3, 4, 5])
+
+
+#retrieves element from begining of list. (first in  first out.)
+print (queue.popleft())#Output:1
+print (queue)#Output:deque([2, 3, 4, 5])
+``` 
+
+
 ### What are list comprehensions and how to use them
+
 ### What are tuples and how to use them
 ### When to use tuples versus lists
 ### What is a sequence
