@@ -13,6 +13,10 @@ It can be used to develop both online and offline applications from productivity
 Lists are used to store multiple items in a single variable.
 
 Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.
+        - List is a collection which is ordered and changeable. Allows duplicate members.
+        - Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+        - Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+        - Dictionary is a collection which is ordered** and changeable. No duplicate members.
 
 Lists are created using square brackets:
 
@@ -20,13 +24,7 @@ Lists are created using square brackets:
 $ thislist = ["apple", "banana", "cherry"]
 $ print(thislist)
 ```
-Lists and tuples are Python’s most used data types. The tuple data type in Python is similar to a list with one difference that element values of a tuple can not be modified, and tuple items are put between parentheses instead of a square bracket.
-
-```
-$ tuples = ("apple", "banana", "cherry")
-$ list = print(list(tuples)) 
-// list = ["apple", "banana", "cherry"]
-```
+Lists and tuples are Python’s most used data types. 
 
 ### 3 What are the differences and similarities between strings and lists
 
@@ -172,8 +170,73 @@ print (queue)#Output:deque([2, 3, 4, 5])
 
 
 ### What are list comprehensions and how to use them
+- Python list comprehensions allow you to create a new list from an existing one. List comprehension offers a shorter syntax .
+- Use list comprehensions instead of map(), for loop or filter() to make your code more concise and readable.
+
+```
+The Syntax:
+
+newlist = [expression for item in iterable if condition == True]
+```  
+Creat new list with For Loop
+```  
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+
+print(newlist)
+['apple', 'banana', 'mango']
+```  
+Creat new list comprehensions
+```  
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+newlist = [x for x in fruits if "a" in x]
+
+print(newlist)
+['apple', 'banana', 'mango']
+```  
+
 
 ### What are tuples and how to use them
+
+Tuples are used to store multiple items in a single variable.
+
+Tuple is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Set, and Dictionary, all with different qualities and usage.
+
+A tuple is a collection which is ordered and unchangeable.
+
+```
+$ tuples = ("apple", "banana", "cherry")
+$ list = print(list(tuples)) 
+// list = ["apple", "banana", "cherry"]
+```
+- We can use tuples to swap the values associated with variables only if the variables are tuple elements. 
+```  
+x = 19
+y = 91
+print('Before swapping:')
+print(f'x = {x}, y = {y}')
+(x, y) = (y, x)
+print('After swapping:')
+print(f'x = {x}, y = {y}')
+```
+- Returning More Than One Value from a Function
+```  
+def sum_and_avg(x, y, z):
+    s = x + y + z
+    a = s/3
+    return(s, a)
+(S, A) = sum_and_avg(3, 8, 5)
+print('Sum =', S)
+print('Avg =', A)
+Sum = 16
+Avg = 5.333333333333333
+```  
+
 ### When to use tuples versus lists
 ### What is a sequence
 ### What is tuple packing
@@ -183,3 +246,4 @@ print (queue)#Output:deque([2, 3, 4, 5])
 ## Reference
 - [w3schools](https://www.w3schools.com/python/ref_list_append.asp)
 - [pythonbasics.org](https://pythonbasics.org/why-python-is-awesome/)
+- [realpython.com](https://realpython.com/list-comprehension-python/)
