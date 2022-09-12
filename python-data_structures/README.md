@@ -84,16 +84,57 @@ names = ['enow','kevin','eyong']   # our collection of names
 ```
 #### Methods For Analyzing
 1) list.index[x[,start[,end]]) : search item value as the input and returns with the position value of the item in the list, if it exists; otherwise, it generates a ValueError. 
-2) list.count(x): is used to determine how many times a given item x appears in a list.
-3) list.sort(key=None, reverse=False):
 
+```
+my_string = "Hello World!"
+my_string.index("l") # outputs 2
+```
+2) list.count(x): is used to determine how many times a given item x appears in a list.
+```
+Format: string.count(sub, start= 0,end=len(string))
+string =  "Add Grepper Answer"
+print(string.count('e')
+>>> 
+```
+ 
+5) list.sort(key=None, reverse=False):
+```
+>>> x = [1 ,11, 2, 3]
+>>> y = sorted(x)
+>>> x
+[1, 11, 2, 3]
+>>> y
+[1, 2, 3, 11]
+```
 The Python list method sort() sorts list data in place. It takes in two keyword arguments.
 
 ###### key(defaults to None): It specifies a function of one argument used to extract items from the list and prepares them for comparison. For example, if we have a list of positive numbers, but we want our sort function to sort their negative values, we can use this key to achieve this.
 ###### reverse(defaults to False): It is a boolean value and if set to True, it will sort in descending order. Its value is False by default hence it sorts in ascending order.
 #### Other Methods
 1) list.copy():  method is used to make a copy of a list. This method is useful for keeping original list values before modifying the list.
-2) list.reverse()
+```
+spring_fruits = ['Apricot', 'Avocado', 'Kiwi', 'Grapefruit', 'Cherry', 'Strawberry']
+
+summer_fruits = list(spring_fruits)
+
+print(summer_fruits)
+Our code returns the following new list:
+
+['Apricot', 'Avocado', 'Kiwi', 'Grapefruit', 'Cherry', 'Strawberry']
+``` 
+
+3) list.reverse()
+```
+the_list = [1,2,3]
+reversed_list = the_list.reverse()
+list(reversed_list) # will return [3,2,1]
+
+# OR, better
+
+the_list = [1,2,3]
+the_list[::-1] # will also return [3,2,1]
+``` 
+
 
 ### How to use lists as stacks and queues
 ### What are list comprehensions and how to use them
