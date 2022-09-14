@@ -238,6 +238,20 @@ Avg = 5.333333333333333
 ```  
 
 ### When to use tuples versus lists
+
+Use List
+
+When you need to mutate your collection.
+
+When you need to remove or add new items to your collection of items.
+
+
+If your data should or does not need to be changed.
+
+Tuples are faster than lists. We should use a Tuple instead of a List if we are defining a constant set of values and all we are ever going to do with it is iterate through it.
+
+If we need an array of elements to be used as dictionary keys, we can use Tuples. As Lists are mutable (unhashable type), they can never be used as dictionary keys.
+
 ### What is a sequence
 
 A sequence is a positionally ordered collection of items. And you can refer to any item in the sequence by using its index number e.g., s[0] and s[1].
