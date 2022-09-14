@@ -196,7 +196,8 @@ OUTPUT
 ```
 
 ## Reference
-- [w3schools](https://www.w3schools.com/python/ref_list_append.asp)
-- [pythonbasics.org](https://pythonbasics.org/why-python-is-awesome/)
-- [realpython.com](https://realpython.com/list-comprehension-python/)
-- [javatpoint.com/](https://www.javatpoint.com/python-del-statement)
+
+[w3schools](https://www.w3schools.com/python/ref_list_append.asp)
+[pythonbasics.org](https://pythonbasics.org/why-python-is-awesome/)
+[realpython.com](https://realpython.com/list-comprehension-python/)
+[javatpoint.com/](https://www.javatpoint.com/python-del-statement)
