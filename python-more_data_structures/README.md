@@ -15,6 +15,7 @@ Sets are used to store multiple items in a single variable.
 Set is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Tuple, and Dictionary, all with different qualities and usage.
 
 A set is a collection which is unordered, unchangeable*, and unindexed.
+
 ``` 
 set1 = {"apple", "banana", "cherry"}
 set2 = {1, 5, 7, 9, 3}
@@ -26,8 +27,11 @@ print(set3 // {1, 5, 7, 9, 3}
 ```
 
 ## What are the most common methods of set and how to use them
+
 ##### Add set Items
+
 update() : To add items from another set into the current set,
+
 ##### Remove Set Items
 
 discard(x): method removes x from the set, but doesn't raise any error if x is not present in the set.
@@ -37,32 +41,40 @@ pop(): method removes and returns a random element from the set.
 clear(): method removes all elements from a set
 
 remove(x):  function removes the element x from a set. It returns a KeyError if x is not part of the set
+
 ```
 >>> sub_set.remove("guitar")
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 KeyError: 'guitar'
+
 ```
 
 ## When to use sets versus lists
+
 ## How to iterate into a set
 
 6 Methods to iterate through set in Python:
 
 1. Using for loop statement
+
 ```
 my_set = {'london', 'new york', 'seattle', 'sydney','chicago'}
 for item in my_set:
   print(item)
-  ```
+  
+```
+
  2. Enumerating (Liet ke) over a set
  
- ```  
+```  
 my_set = {'london', 'new york', 'seattle', 'sydney','chicago'}
 for counter, item in enumerate(my_set):
   print(item) 
-  ```
+  
+```
 3. Using iter with for loop
+
 We can use the iter() method as well for iterating through a python set. The iter() method will return an iterator. Using that iterator, we can iterate over a given object. We shall use the iter() method with a for loop.
 
 ```
@@ -74,13 +86,16 @@ seattle
 new york
 chicago
 sydney
-  ```
+
+```
+
  4 Converting the set to a list
  
- ```
+```
  for i in range(0,len(my_list)):
   print(my_list[i])
-  ```
+```
+
 5. Using comprehension
 
 ``` 
@@ -88,8 +103,8 @@ Syntax: [expression for item in list]
 
 my_set = {'london', 'new york', 'seattle', 'sydney','chicago'}
 val = [print(item) for item in my_set]
-
 ```
+
 6. Iterating over two sets simultaneously using zip()
 
 ``` 
@@ -127,6 +142,9 @@ thisdict =	{
 }
 print(thisdict)
 //output: {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+
+```
+
 ## When to use dictionaries versus lists or sets
 
 Use dictionaries for the lookup of elements as it is faster than a list and takes less time to traverse.
@@ -176,24 +194,30 @@ The filter() function is used to generate an output list of values that return t
 ````
 SYNTAX: filter (function, iterables)
 ````
-This function like map(), can take user-defined functions and lambda functions as parameters.
-```  
+
+
+map(), can take user-defined functions and lambda functions as parameters.
+
+
+
 y = filter(lambda x: (x>=3), (1,2,3,4))
 print(list(y))
 // [3, 4]
-``` 
-reduce() function applies a provided function to ‘iterables’ and returns a single value, as the name implies
-``` 
-SYNTAX: reduce(function, iterables)
-```
 
-```
+
+
+reduce() function applies a provided function to ‘iterables’ and returns a single value, as the name implies
+
+
+SYNTAX: reduce(function, iterables)
+
+Example: 
+
+
 from functools import reduce
 reduce(lambda a,b: a+b,[23,21,45,98])
 OUTPUT
-
 187
-```
 
 ## Reference
 
