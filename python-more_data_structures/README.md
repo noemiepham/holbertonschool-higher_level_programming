@@ -182,43 +182,48 @@ The map() function is a higher-order function. As previously stated, this functi
 ``` 
 SYNTAX: map(function, iterables)
 
-````
-````
+```
+
+```
 tup= (5, 7, 22, 97, 54, 62, 77, 23, 73, 61)
 newtuple = tuple(map(lambda x: x+3 , tup)) 
 print(newtuple)
 // (8, 10, 25, 100, 57, 65, 80, 26, 76, 64)
-``` 
+
+```
+
 The filter() function is used to generate an output list of values that return true when the function is called. It has the following syntax:
 
-````
+```
 SYNTAX: filter (function, iterables)
-````
+```
 
 
 map(), can take user-defined functions and lambda functions as parameters.
 
 
-
+``` 
 y = filter(lambda x: (x>=3), (1,2,3,4))
 print(list(y))
 // [3, 4]
 
+``` 
 
 
 reduce() function applies a provided function to ‘iterables’ and returns a single value, as the name implies
 
-
+``` 
 SYNTAX: reduce(function, iterables)
+``` 
 
 Example: 
 
-
+``` 
 from functools import reduce
 reduce(lambda a,b: a+b,[23,21,45,98])
 OUTPUT
 187
-
+``` 
 ## Reference
 
 [w3schools](https://www.w3schools.com/python/ref_list_append.asp)
