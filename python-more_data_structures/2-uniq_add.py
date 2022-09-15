@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
     uniq = set(my_list)
-    total = sum(my_list)
-    return sum
+    total = sum(uniq)
+    return total
 
     # method 2
     #    sum = 0
