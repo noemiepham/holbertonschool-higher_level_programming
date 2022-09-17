@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-from distutils.log import error
-from itertools import count
-
-
 def safe_print_list_integers(my_list=[], x=0):
     count = 0
     error = 0
