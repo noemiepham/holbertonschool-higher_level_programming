@@ -2,6 +2,9 @@
 ''' python3 -c 'print(__import__("my_module").__doc__)'''
 
 
+from glob import escape
+
+
 class Square():
     '''python3 -c 'print(__import__("my_module").MyClass.__doc__)'''
 
@@ -12,5 +15,7 @@ class Square():
         try:
             if size < 0:
                 raise ValueError('size must be >= 0')
+            if not isinstance(size, int):
+                raise TypeError('size must be an integer')
         except TypeError:
             raise TypeError('size must be an integer')
