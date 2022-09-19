@@ -2,9 +2,6 @@
 ''' python3 -c 'print(__import__("my_module").__doc__)'''
 
 
-from glob import escape
-
-
 class Square():
     '''python3 -c 'print(__import__("my_module").MyClass.__doc__)'''
 
