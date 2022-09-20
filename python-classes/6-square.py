@@ -37,7 +37,7 @@ class Square():
 
     # Function
     def area(self):
-        return (self._size * self._size)
+        return (self.__size * self.__size)
 
     # Public instance method
     def my_print(self):
