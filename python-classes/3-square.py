@@ -22,3 +22,5 @@ class Square():
 
     def area(self):
         return (self.__size * self.__size)
+    '''python3 -c 'print(__import__("my_module").
+    MyClass.my_function.__doc__) '''
