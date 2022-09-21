@@ -1,0 +1,13 @@
+First import ``add_integer``
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Given two integers, return the sum.
+:param a: int
+:param b=98: int
+:return: int
+
+Basic usage:
+    >>> add_integer(1, 2)
+    3
+
