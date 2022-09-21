@@ -12,18 +12,22 @@ Basic usage:
     >>> add_integer(1, 2)
     3
 
+Test present: integer casting:
+
     >>> add_integer(100, -2)
     98
+
+Test present: check type:
 
     >>> add_integer(2)
     100
 
-    '''if a ou b is float, must be first carsted to integers'''
+Test if a ou b is float, must be first carsted to integers:
 
     >>> add_integer(100.3, -2)
     98
 
-if a ou b is not int or float print Typerror: a ou b must to be integer:
+Test if a ou b is not int or float print Typerror: a ou b must to be integer:
 
     >>> add_integer(4, "School")
     Traceback (most recent call last):
@@ -35,4 +39,12 @@ if a ou b is not int or float print Typerror: a ou b must to be integer:
     ...
     TypeError: a must be an integer
 
-
+Test present: Float overflow:
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+ 
+Test present: cannot convert float NaN to integer
+   >>>  >>> add_integer(float(NaN))
+    Traceback (most recent call last):
+    NameError: name 'NaN' is not defined
