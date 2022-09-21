@@ -45,6 +45,7 @@ Test present: Float overflow:
     OverflowError: cannot convert float infinity to integer
  
 Test present: cannot convert float NaN to integer
-   >>>  >>> add_integer(float(NaN))
+    >>> add_integer(float('NaN'))
     Traceback (most recent call last):
-    NameError: name 'NaN' is not defined
+    ...
+    ValueError: cannot convert float NaN to integer
