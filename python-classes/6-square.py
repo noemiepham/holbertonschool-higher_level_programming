@@ -2,9 +2,6 @@
 """ Print square division with position"""
 
 
-from email import message
-
-
 class Square():
     """a class Square that defines a square by: (based on 5-square.py)"""
 
