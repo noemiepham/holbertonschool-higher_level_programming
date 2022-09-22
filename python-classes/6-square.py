@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-'''python3 -c 'print(__import__("my_module").__doc__)'''
+""" Print square division with position"""
+
+
 class Square():
-    '''python3 -c 'print(__import__("my_module").MyClass.__doc__)'''
+    """a class Square that defines a square by: (based on 5-square.py)"""
+
     def __init__(self, size=0, position=(0, 0)):
-        '''python3 -c 'print(__import__("my_module").my_function.__doc__)'''
-        '''python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'''
+        """ Size : size the list
+            position of square
+        """
+
         self.size = size
         self.position = position
 
