@@ -1,0 +1,17 @@
+Using '' print_square ''
+--------
+
+>>> print_square = __import__('4-print_square').print_square
+def print_square(size):
+     """
+     size is the size length of the square
+     size must be an integer
+     check size > 0 or size is int or not
+     """
+Base test: 
+     >>> print_square(4)
+     ####
+     ####
+     ####
+     ####
+
