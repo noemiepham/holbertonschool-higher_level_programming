@@ -54,7 +54,24 @@ Test present: matrix= list of lists of integers with one float(inf/nan) / div= f
      ...
      TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-Test present: missing 2 arguments
-     >>> matrix = [[1]]
+Test present: matrix= list of lists of integers but not rectangular / div= integer 
+=> TypeError: matrix must have each row with the same size
+
+     >>> matrix = [[1, 2, 3], [2, 3]]
      >>> matrix_divided(matrix, 3)
-     [[0.33]]
+     Traceback (most recent call last):
+     ...
+     TypeError: Each row of the matrix must have the same size
+
+Test present: missing one argument
+
+     >>> matrix = [[]]
+     >>> matrix_divided(matrix, 3)
+     [[]]
+
+Test present: missing 2 arguments, no input
+     >>> matrix = [[1]]
+     >>> matrix_divided()
+     Traceback (most recent call last):
+     ...
+     TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
