@@ -2,6 +2,9 @@
 """ Print square division with position"""
 
 
+from email import message
+
+
 class Square():
     """a class Square that defines a square by: (based on 5-square.py)"""
 
@@ -20,9 +23,9 @@ class Square():
     @size.setter
     def size(self, value):
         if value < 0:
-            raise TypeError('size must be >= 0')
-        elif not isinstance(value, int):
-            raise ValueError('size must be an integer')
+            raise ValueError('size must be >= 0')
+        elif type(value) != int:
+            raise TypeError('size must be an integer')
         else:
             self.__size = value
 
@@ -32,12 +35,13 @@ class Square():
 
     @position.setter
     def position(self, value):
-        if type(value) != 'tuple' or len(value) != 2:
-            raise TypeError('position must be a tuple of 2 positive integers')
+        message = 'position must be a tuple of 2 positive integers'
+        if type(value) != tuple or len(value) != 2:
+            raise TypeError(message)
+
         for item in value:
             if type(item) != int or item < 0:
-                raise TypeError(
-                    'position must be a tuple of 2 positive integers')
+                raise TypeError(message)
         self.__position = value
 
     def area(self):
