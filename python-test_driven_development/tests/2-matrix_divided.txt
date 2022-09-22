@@ -1,78 +1,32 @@
-First import ``add_integer``
+Using ``matrix_divided``
+-----------------------
+
+Checks if all matrix items are ints or floats
+Checks if length of lists in matrix are same
+Checks if div is a float or int or 0
+Divides all items in matrix by div
+Returns a new matrix
+
+First import ``matrix_divided``
 
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
-Now use it: 
-
-''' Function that divides all element of a matrix
-div: number to be matrix_divided
-return: new matrix
-'''
-
-Basic usage:
-    >>> matrix = [[1, 2, 3],[4, 5, 6]]
-    >>> matrix_divided(matrix, 3)
+Now use it:
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> print(matrix_divided(matrix, 3))
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
-Test: Case matrix is list, div is string
 
-     >>> matrix = [[1, 2, 3],[4, 5, 6]]
-     >>> matrix_divided(matrix, '3')
+Test: Input matrix have element is not integer
+     >>> matrix = [[3, "9"], [12, 3]]
+     >>> matrix_divided(matrix, 2)
+     Traceback (most recent call last):
+     ...  
+     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test: Input div is not a integer
+     >>> matrix = [[3, 9], [12, 3]]
+     >>> matrix_divided(matrix, "2")
      Traceback (most recent call last):
      ...
      TypeError: div must be a number
-
-Test present: matrix= not a list of lists of integers / div= integer 
-     >>> matrix = [ [1, 2, 3], 5 ]
-     >>> matrix_divided(matrix, 3)
-     Traceback (most recent call last):
-     ...
-     TypeError: matrix must be a matrix (list of lists) of integers/floats
-
-Test present: matrix= list of lists of integers / div= float(inf) 
-=> all values == 0.0
-
-     >>> matrix = [[1, 2, 3],[4, 5, 6]]
-     >>> matrix_divided(matrix, float('inf'))
-     [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
-
-Test present: matrix= list of lists of integers with one float(inf/nan) / div= integer
-
-     >>> matrix = [[1, 2, 3], float('inf')]
-     >>> matrix_divided(matrix, 3)
-     Traceback (most recent call last):
-     ...
-     TypeError: matrix must be a matrix (list of lists) of integers/floats
-
-
-
-Test present: matrix= list of lists of integers with one float(inf/nan) / div= float(inf/nan)
-
-     >>> matrix = [[1, 2, 3],float('inf')]
-     >>> matrix_divided(matrix, float('inf'))
-     Traceback (most recent call last):
-     ...
-     TypeError: matrix must be a matrix (list of lists) of integers/floats
-
-Test present: matrix= list of lists of integers but not rectangular / div= integer 
-=> TypeError: matrix must have each row with the same size
-
-     >>> matrix = [[1, 2, 3], [2, 3]]
-     >>> matrix_divided(matrix, 3)
-     Traceback (most recent call last):
-     ...
-     TypeError: Each row of the matrix must have the same size
-
-Test present: missing one argument
-
-     >>> matrix = [[]]
-     >>> matrix_divided(matrix, 3)
-     [[]]
-
-Test present: missing 2 arguments, no input
-     >>> matrix = [[1]]
-     >>> matrix_divided()
-     Traceback (most recent call last):
-     ...
-     TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
-Finish Test
