@@ -5,7 +5,6 @@ by the parameter "div", and returns the divided matrix
 
 
 def matrix_divided(matrix, div):
-    
     """ Divides all elements of a matrix by "div"
     checks if the entire list is int/float
     checks if each list in the matrix are the same size
