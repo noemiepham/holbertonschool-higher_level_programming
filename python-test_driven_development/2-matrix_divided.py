@@ -1,11 +1,20 @@
 #!/usr/bin/python3
-''' python3 -c 'print(__import__("my_module").__doc__)'''
+""" matrix_divided divides the given matrix
+by the parameter "div", and returns the divided matrix
+"""
 
 
 def matrix_divided(matrix, div):
-    '''python3 -c 'print(__import__("my_module").my_function.__doc__)'''
+    
+    """ Divides all elements of a matrix by "div"
+    checks if the entire list is int/float
+    checks if each list in the matrix are the same size
+    checks if "div" is an int/float or is 0
+    """
+
     message1 = 'matrix must be a matrix (list of lists) of integers/floats'
     message2 = 'Each row of the matrix must have the same size'
+
     if div == 0:
         raise ZeroDivisionError("division by zero")
     if not isinstance(div, (int, float)):
