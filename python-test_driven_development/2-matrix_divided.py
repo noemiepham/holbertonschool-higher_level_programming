@@ -2,9 +2,6 @@
 ''' python3 -c 'print(__import__("my_module").__doc__)'''
 
 
-from email import message
-
-
 def matrix_divided(matrix, div):
     '''python3 -c 'print(__import__("my_module").my_function.__doc__)'''
     message1 = 'matrix must be a matrix (list of lists) of integers/floats'
@@ -14,14 +11,17 @@ def matrix_divided(matrix, div):
     if not isinstance(div, (int, float)):
         raise TypeError('div must be a number')
     newrs = []
-    for r in matrix:
-        if not isinstance(r, (int, float)):
+    for row in matrix:
+        if type(row) is not list:
+            raise TypeError(message1)
+        if len(row) != len(matrix[0]):
             raise TypeError(message2)
         inner_list = []
-        for items in r:
-            if items is not int and items is not float:
+        for items in row:
+            if not isinstance(items, (int, float)):
                 raise TypeError(message1)
-            rs = round(items / div, 2)
-            inner_list.append(rs)
+            else:
+                rs = round(items / div, 2)
+                inner_list.append(rs)
         newrs.append(inner_list)
     return (newrs)
