@@ -30,3 +30,7 @@ Test: Input div is not a integer
      Traceback (most recent call last):
      ...
      TypeError: div must be a number
+
+Test: div = float('inf'):
+     >>> matrix_divided([[1]], float("inf"))
+     [[0.0]]
