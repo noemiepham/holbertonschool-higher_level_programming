@@ -1,0 +1,23 @@
+Using ``text_indentation``
+-----------------------
+First import '''say_my_name'''
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+``
+def text_indentation(text):
+     text is string
+     Write a function that prints a text with 2 new lines 
+     after each of these characters: ., ? and :
+``
+
+Base test: 
+
+     >>>text_indentation("""Hello. what your name? my name is: """)
+     Hello.
+     what your name?
+     my name is:
+Test: text is no string 
+     >>>text_indentation(5)
+     Traceback (most recent call last):
+     ...
+     TypeError: text must be a string
