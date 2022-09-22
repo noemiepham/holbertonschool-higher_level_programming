@@ -1,6 +1,6 @@
 Using ``text_indentation``
 -----------------------
-First import '''say_my_name'''
+First import '''text_indentation'''
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 ``
@@ -12,10 +12,12 @@ def text_indentation(text):
 
 Base test: 
 
-     >>>text_indentation("""Hello. what your name? my name is: """)
-     Hello.
-     what your name?
-     my name is:
+     >>>text_indentation("Holberton.School")
+     Holberton.
+
+     School
+
+
 Test: text is no string 
      >>>text_indentation(5)
      Traceback (most recent call last):
