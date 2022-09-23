@@ -3,19 +3,26 @@
  2 new lines after each of these characters: ., ? and :"""
 
 
-import string
+from sys import flags
+from unittest import skip
 
 
 def text_indentation(text):
-    """ text must be a string,
-    otherwise raise a TypeError exception with the message
-    text must be a string """
-    if type(text) != str:
-        raise TypeError("text must be a string")
+    """ insert doble jump line after . : or ? """
 
-    for i in range(len(text)):
-        if text[i - 1] == "." or text[i - 1] == '?' or text[i - 1] == ":":
+    characters = [".", "?", ":"]
+    skip_next = False
+    if type(text) != str:
+        raise TypeError('text must be a string')
+    for letter in text:
+        if letter in characters:
+            print(letter)
             print()
+            skip_next = True
         else:
-            print(text[i], end="")
-    print()
+            if flags is False:
+                print(letter, end="")
+            else:
+                if letter != " ":
+                    print(letter, end="")
+                    skip_next = False
