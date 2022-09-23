@@ -31,3 +31,5 @@ class TestMaxInteger(unittest.TestCase):
     def text_list_empty(self):
         """List is empty"""
         self.assertEqual(max_integer([]), None)
+if __name__ == '__main__':
+    unittest.main()
