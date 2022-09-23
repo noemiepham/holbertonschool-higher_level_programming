@@ -8,8 +8,9 @@ max_integer = __import__('6-max_integer').max_integer
 class TestMaxInteger(unittest.TestCase):
     """Test for “max at the end” list order"""
 
-    def text_max_integer(self):
-        """Test list number normal and order"""
+    def test_max_int_basic(self):
+        """ tests normal list of ints
+        """
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
 
     def text_begining_inorder(self):
@@ -31,5 +32,6 @@ class TestMaxInteger(unittest.TestCase):
     def text_list_empty(self):
         """List is empty"""
         self.assertEqual(max_integer([]), None)
+
 if __name__ == '__main__':
     unittest.main()
