@@ -19,7 +19,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def text_max_int_mid(self):
         """ Test for “max in the middle” exists"""
-        self.assertEqual(max_integer([1, 2, 4, 3]), 4)
+        self.assertEqual(max_integer([1, 2, 5, 3, 4]), 5)
 
     def test_max_int_neg_negative(self):
         """Test for “only negative numbers in the list” exists"""
