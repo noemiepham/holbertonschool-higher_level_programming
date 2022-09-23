@@ -17,7 +17,7 @@ class TestMaxInteger(unittest.TestCase):
         """ Test list number normal and inoder"""
         self.assertEqual(max_integer([4, 2, 1, 3]), 4)
 
-    def text_max_int_mid(self):
+    def text_max_integer(self):
         """ Test for “max in the middle” exists"""
         self.assertEqual(max_integer([1, 2, 5, 3, 4]), 5)
 
