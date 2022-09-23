@@ -29,7 +29,7 @@ class TestMaxInteger(unittest.TestCase):
         """Test for “list of one element” exists"""
         self.assertEqual(max_integer([1]), 1)
 
-    def text_list_empty(self):
+    def test_max_int_empty(self):
         """List is empty"""
         self.assertEqual(max_integer([]), None)
 
