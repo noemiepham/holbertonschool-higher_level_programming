@@ -25,8 +25,9 @@ class TestMaxInteger(unittest.TestCase):
         """Test for “only negative numbers in the list” exists"""
         self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
 
-    def text_max_int_one(self):
-        """Test for “list of one element” exists"""
+    def test_max_int_one(self):
+        """ tests if list has only one item
+        """
         self.assertEqual(max_integer([1]), 1)
 
     def test_max_int_empty(self):
