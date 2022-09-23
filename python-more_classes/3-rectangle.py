@@ -2,8 +2,6 @@
 """ Real definition of a rectangle"""
 
 
-from turtle import width
-
 
 class Rectangle:
     """ Rectangle that defines a rectangle"""
