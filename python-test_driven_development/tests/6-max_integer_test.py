@@ -17,7 +17,7 @@ class TestMaxInteger(unittest.TestCase):
         """ Test list number normal and inoder"""
         self.assertEqual(max_integer([4, 2, 1, 3]), 4)
 
-    def text_max_int_middle_list(self):
+    def text_max_int_mid(self):
         """ Test for “max in the middle” exists"""
         self.assertEqual(max_integer([1, 2, 4, 3]), 4)
 
@@ -25,7 +25,7 @@ class TestMaxInteger(unittest.TestCase):
         """Test for “only negative numbers in the list” exists"""
         self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
 
-    def text_max_int_one_element(self):
+    def text_max_int_one(self):
         """Test for “list of one element” exists"""
         self.assertEqual(max_integer([1]), 1)
 
