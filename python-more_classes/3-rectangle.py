@@ -2,7 +2,6 @@
 """ Real definition of a rectangle"""
 
 
-
 class Rectangle:
     """ Rectangle that defines a rectangle"""
 
@@ -56,6 +55,6 @@ class Rectangle:
             for h in range(heightR):
                 for w in range(widthR):
                     s += "#"
-                if h != range(heightR - 1):
+                if h != heightR - 1:
                     s += "\n"
             return s
