@@ -3,10 +3,6 @@
  2 new lines after each of these characters: ., ? and :"""
 
 
-from sys import flags
-from unittest import skip
-
-
 def text_indentation(text):
     """ insert doble jump line after . : or ? """
 
@@ -20,7 +16,7 @@ def text_indentation(text):
             print()
             skip_next = True
         else:
-            if flags is False:
+            if skip_next is False:
                 print(letter, end="")
             else:
                 if letter != " ":
