@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Rectangle"""
-from pydoc import classname
-from turtle import width
 
 
 class BaseGeometry:
