@@ -7,8 +7,7 @@ def append_write(filename="", text=""):
     with open(filename, 'a', encoding="utf-8") as myfile:
         myfile.write(text)
     with open(filename, encoding="utf-8") as countFile:
-        countFile = open(filename, "r")
         i = 0
-        for j in range(len(countFile.read())):
+        for j in range(len(text)):
             i += 1
         return (i)
