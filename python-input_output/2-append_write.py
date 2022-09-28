@@ -8,6 +8,6 @@ def append_write(filename="", text=""):
         myfile.write(text)
     myfile = open(filename, "r")
     i = 0
-    for j in range(len(myfile.readline())):
+    for j in range(len(myfile.read())):
         i += 1
     return (i)
