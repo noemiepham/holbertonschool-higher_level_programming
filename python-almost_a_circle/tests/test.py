@@ -5,7 +5,11 @@ import unittest
 from models.base import Base
 
 
-class TestMaxInteger(unittest.TestCase):
-  """Test for “max at the end” list order"""
+class TestBase(unittest.TestCase):
+  """Test Base"""
+  def test_cound_object(self):
+      """test couting number of"""
+      Base._Base__nb_object = 0
+      self.assertEqual(Base._Base__nb_objects, 0)
 
 
