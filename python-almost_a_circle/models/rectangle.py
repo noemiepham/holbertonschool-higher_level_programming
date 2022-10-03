@@ -70,3 +70,13 @@ class Rectangle(Base):
             for j in range(self.width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """Overriding the str"""
+        width = self.__width
+        height = self.__height
+        x = self.__x
+        y = self.__y
+        id = self.id
+        return "[Rectangle] ({}) <{}>/<{}>" \
+               " - <{}>/<{}>".format(id, x, y, width, height)
