@@ -17,7 +17,7 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         """Raise Exception"""
-        return (self.__width * self.__height)
+        return self.__width * self.__height
 
     def __str__(self):
         """Should retirn str"""
