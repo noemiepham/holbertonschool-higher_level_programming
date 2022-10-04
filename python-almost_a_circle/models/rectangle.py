@@ -87,9 +87,12 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{}" \
                " - {}/{}".format(id, x, y, width, height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Import argv et argc"""
-        if len(args) != 0:
+        if len(kwargs) != 0:
+            for item, value in kwargs.items():
+                setattr(self, item, value)
+        elif len(args) != 0:
             try:
                 self.id = args[0]
                 self.__width = args[1]
