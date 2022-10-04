@@ -103,3 +103,8 @@ class Rectangle(Base):
                 pass
         else:
             print()
+
+    def to_dictionary(self):
+        """Dictionary"""
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.height, 'width': self.width}
