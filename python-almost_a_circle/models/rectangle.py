@@ -1,11 +1,15 @@
 #!/usr/bin/python3
 """Rectangle"""
+
 from models.base import Base
+import sys
 
 
 class Rectangle(Base):
     """Inheritance de Base"""
+
     def __init__(self, width=0, height=0, x=0, y=0, id=None):
+        self.id = None
         self.width = width
         self.height = height
         self.x = x
@@ -82,3 +86,17 @@ class Rectangle(Base):
         id = self.id
         return "[Rectangle] ({}) {}/{}" \
                " - {}/{}".format(id, x, y, width, height)
+
+    def update(self, *args):
+        """Import argv et argc"""
+        if len(args) != 0:
+            try:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+            except IndexError:
+                pass
+        else:
+            print()
