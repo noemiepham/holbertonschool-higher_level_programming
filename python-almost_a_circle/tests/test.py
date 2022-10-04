@@ -7,6 +7,12 @@ from models.base import Base
 class TestBase(unittest.TestCase):
     """Unit tests suite for Base class"""
 
+    def setUp(self):
+
+
+
+
+
     def test_constantId(self):
         """Test of Base for correctly initializing an id"""
         b = Base(5)

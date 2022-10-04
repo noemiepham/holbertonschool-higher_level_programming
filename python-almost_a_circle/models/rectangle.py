@@ -66,10 +66,12 @@ class Rectangle(Base):
 
     def display(self):
         """Display #"""
-        for i in range(self.height):
-            for j in range(self.width):
-                print("#", end="")
-            print()
+
+        if self.__y != 0:
+            for newline in range(self.__y):
+                print()
+        for row in range(self.__height):
+            print((self.__x * " ") + (self.__width * '#'))
 
     def __str__(self):
         """Overriding the str"""
