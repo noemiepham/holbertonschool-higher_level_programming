@@ -18,10 +18,13 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
-        """size needs to be an int"""
+        """size"""
         self.width = value
         self.height = value
 
     def __str__(self):
         """Return  value"""
-        return "[Square] ({:d}) {:d}/{:d} - {:d})".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id,
+                                                         self.x, self.y, self.width)
+
+
