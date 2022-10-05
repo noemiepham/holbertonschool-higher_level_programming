@@ -15,14 +15,19 @@ class TestSquare(unittest.TestCase):
 
 
       with self.assertRaises(TypeError):
-           s = Square(5, "1")
-           s = Square()
+           s1 = Square(5, "1")
+           s2 = Square()
+           s3 = Square(5, None)
+           s4 = Square(5, 9.5)
+           s5 = Square(5, float('int'))
+
 
       with self.assertRaises(ValueError):
            s = Square(-5, 3, 4)
+           s = Square("string")
 
            """Test of Square(1, 2, "3") exists"""
-           s = Square("string")
+
 
 
 
