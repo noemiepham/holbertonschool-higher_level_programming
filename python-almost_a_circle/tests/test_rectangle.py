@@ -3,6 +3,7 @@
 import unittest
 from unittest import mock
 import io
+import os
 from models.rectangle import Rectangle
 
 
@@ -112,6 +113,12 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(to_test.id, 89)
         self.assertEqual(to_test.x, 0)
         self.assertEqual(to_test.y, 0)
+
+    def test_dictionary(self):
+      s1 = Rectangle(10, 2, 1, 9)
+      s1_dict = s1.to_dictionary()
+      self.assertEqual(s1_dict, {'x': 1, 'y': 9, 'id': 9, 'height': 2, 'width': 10})
+
 
 
 if __name__ == "__main__":
