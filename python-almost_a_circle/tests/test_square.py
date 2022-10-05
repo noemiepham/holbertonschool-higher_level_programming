@@ -16,8 +16,10 @@ class TestSquare(unittest.TestCase):
 
       with self.assertRaises(TypeError):
            s = Square(5, "1")
-           s1 = Square("1")
+           s = Square("1")
 
+      with self.assertRaises(ValueError):
+           s = Square(-5, 3, 4)
 
   def test_area(self):
       """testing area"""
