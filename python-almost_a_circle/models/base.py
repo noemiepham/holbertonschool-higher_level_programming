@@ -21,3 +21,4 @@ class Base:
             return "[]"
         else:
             json.dumps(list_dictionaries)
+
