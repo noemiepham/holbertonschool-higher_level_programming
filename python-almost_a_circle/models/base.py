@@ -60,7 +60,7 @@ class Base:
         """
         class_name = []
         if not os.path.exists(cls.__name__ + ".json"):
-           return class_name
+            return class_name
         with open(cls.__name__ + ".json", mode="r") as read_file:
             s = read_file.read()
             s_list = cls.from_json_string(s)
