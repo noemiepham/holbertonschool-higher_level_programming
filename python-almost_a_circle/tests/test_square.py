@@ -16,11 +16,18 @@ class TestSquare(unittest.TestCase):
 
       with self.assertRaises(TypeError):
            s = Square(5, "1")
-           s = Square("1")
-           s = Square("1", "1")
+           s = Square()
 
       with self.assertRaises(ValueError):
            s = Square(-5, 3, 4)
+
+           """Test of Square(1, 2, "3") exists"""
+           s = Square("string")
+
+
+
+
+
 
   def test_area(self):
       """testing area"""
