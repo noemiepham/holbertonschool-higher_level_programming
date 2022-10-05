@@ -34,3 +34,10 @@ class Base:
                 for item in range(len(list_objs)):
                     lis.append(list_objs[item].to_dictionary())
                 write_file.write(cls.to_json_string(lis))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """from json"""
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
