@@ -68,7 +68,8 @@ class TestRectangle(unittest.TestCase):
         assert mocked_stdout.getvalue() == "###\n###\n"
 
     def test_str(self):
-        """Tests if Rectangle's str representation exists and has right format"""
+        """Tests if Rectangle's str representation
+        exists and has right format"""
         r = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(str(r), "[Rectangle] (12) 2/1 - 4/6")
 
@@ -115,10 +116,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(to_test.y, 0)
 
     def test_dictionary(self):
-      s1 = Rectangle(10, 2, 1, 9)
-      s1_dict = s1.to_dictionary()
-      self.assertEqual(s1_dict, {'x': 1, 'y': 9, 'id': 9, 'height': 2, 'width': 10})
-
+        s1 = Rectangle(10, 2, 1, 9)
+        s1_dict = s1.to_dictionary()
+        self.assertEqual(s1_dict, {'x': 1, 'y': 9, 'id': 9,
+                                   'height': 2, 'width': 10})
 
 
 if __name__ == "__main__":
