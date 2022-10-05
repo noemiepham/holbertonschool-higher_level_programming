@@ -11,15 +11,15 @@ class TestSquare(unittest.TestCase):
   def test_instance(self):
       """test input size correct standard """
       s = Square(5)
-      self.assertEqual(s.size, 5)
+      self.assertEqual(s.width, 5)
+      self.assertEqual(s.height, 5)
 
 
       with self.assertRaises(TypeError):
            s1 = Square(5, "1")
            s2 = Square()
-           s3 = Square(5, None)
-           s4 = Square(5, 9.5)
-           s5 = Square(5, float('int'))
+           s3 = Square("1")
+
 
 
       with self.assertRaises(ValueError):
