@@ -51,13 +51,6 @@ class TestSquare(unittest.TestCase):
       self.assertEqual(s.size, 1)
       self.assertEqual(s.x, 2)
       self.assertEqual(s.y, 3)
-
-
-
-
-
-
-
   def test_area(self):
       """testing area"""
 
@@ -83,7 +76,27 @@ class TestSquare(unittest.TestCase):
       """Test str"""
 
       s = Square(1, 2)
-      self.assertEqual(s.__str__(), '[Square] (11) 2/0 - 1')
+      self.assertEqual(s.__str__(), '[Square] (15) 2/0 - 1')
+
+  def test_created(self):
+      """Test of Square.create(**{ 'id': 89 }) in Square exists"""
+      s = Square.create(**{ 'id': 89 })
+      self.assertEqual(s.id, 89)
+
+      s = Square.create(**{ 'id': 89, 'size': 1 })
+      self.assertEqual(s.id, 89)
+      self.assertEqual(s.size, 1)
+
+      s = Square.create(**{'id': 89, 'size': 1, 'x': 2})
+      self.assertEqual(s.id, 89)
+      self.assertEqual(s.size, 1)
+      self.assertEqual(s.x, 2)
+
+      s = Square.create(**{'id': 89, 'size': 1, 'x': 2, 'y': 3})
+      self.assertEqual(s.id, 89)
+      self.assertEqual(s.size, 1)
+      self.assertEqual(s.x, 2)
+      self.assertEqual(s.y, 3)
 
 
 
