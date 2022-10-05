@@ -46,9 +46,22 @@ class Base:
     def create(cls, **dictionary):
         """Returns an instance with all attributes"""
         if cls.__name__ == "Rectangle":
-            temp = cls(1, 1)
+            temp = cls(3, 2)
         if cls.__name__ == "Square":
-            temp = cls(1)
+            temp = cls(9)
         # update temp with obj func update()
         temp.update(**dictionary)
         return temp
+
+    @classmethod
+    def load_from_file(cls):
+        """Loads from csv file
+        """
+        class_name = []
+        with open(cls.__name__ + ".json", mode="r") as read_file:
+            s = read_file.read()
+            s_list = json.loads(s)
+            for item in s_list:
+                # formatting with create()
+                class_name.append(cls.create(**item))
+            return class_name
