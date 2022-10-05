@@ -60,7 +60,7 @@ class Base:
         class_name = []
         with open(cls.__name__ + ".json", mode="r") as read_file:
             s = read_file.read()
-            s_list = json.loads(s)
+            s_list = cls.from_json_string(s)
             for item in s_list:
                 # formatting with create()
                 class_name.append(cls.create(**item))
