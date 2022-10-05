@@ -12,6 +12,12 @@ class TestSquare(unittest.TestCase):
       """test input size correct standard """
       s = Square(5)
       self.assertEqual(s.size, 5)
+
+
+      with self.assertRaises(TypeError):
+           s = Square(5, "1")
+
+
   def test_area(self):
       """testing area"""
 
@@ -22,7 +28,6 @@ class TestSquare(unittest.TestCase):
       self.assertEqual(s.area(), 1)
   def test_display(self):
       """test display()"""
-
       s = Square(5)
       with mock.patch("sys.stdout", new=io.StringIO()) as mock_stdout:
         s.display()
@@ -39,6 +44,7 @@ class TestSquare(unittest.TestCase):
 
       s = Square(1, 2)
       self.assertEqual(s.__str__(), '[Square] (11) 2/0 - 1')
+
 
 
 if __name__ == "__main__":
