@@ -98,6 +98,14 @@ class TestSquare(unittest.TestCase):
       self.assertEqual(s.x, 2)
       self.assertEqual(s.y, 3)
 
+  def test_creat(self):
+    """Test of Square.save_to_file(None) in Square exists"""
+    Square.save_to_file(None)
+    load_file = Square.load_from_file()
+    self.assertEqual(len(load_file), 0)
+
+    """Test of Square.save_to_file([]) in Square exists"""
+
 
 
 if __name__ == "__main__":
