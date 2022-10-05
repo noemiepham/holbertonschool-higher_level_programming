@@ -16,20 +16,37 @@ class TestSquare(unittest.TestCase):
 
 
       with self.assertRaises(TypeError):
-          s1 = Square(5, "1")
+          Square(5, "1")
 
       with self.assertRaises(TypeError):
-           s2 = Square()
+           Square()
 
       with self.assertRaises(TypeError):
-           s3 = Square("1")
+           Square("1")
 
       with self.assertRaises(ValueError):
-           s = Square(-5, 3, 4)
+           Square(-5, 3, 4)
 
       with self.assertRaises(TypeError):
            Square(1, 2, "3")
 
+      with self.assertRaises(ValueError):
+           Square(1, -2)
+
+      with self.assertRaises(ValueError):
+           Square(1, 2, -3)
+
+      with self.assertRaises(ValueError):
+           Square(0)
+
+
+  def test_case_normal(self):
+      """Test of Square(1, 2, 3, 4) exists"""
+      s = Square(1, 2, 3, 4)
+      self.assertEqual(s.id, 4)
+      self.assertEqual(s.size, 1)
+      self.assertEqual(s.x, 2)
+      self.assertEqual(s.y, 3)
 
 
 
