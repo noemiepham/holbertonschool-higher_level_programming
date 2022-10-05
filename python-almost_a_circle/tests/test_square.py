@@ -3,7 +3,7 @@
 import unittest
 from unittest import mock
 import io
-import  os
+import os
 from models.square import Square
 
 
@@ -77,7 +77,7 @@ class TestSquare(unittest.TestCase):
       """Test str"""
 
       s = Square(1, 2)
-      self.assertEqual(s.__str__(), '[Square] (15) 2/0 - 1')
+      self.assertEqual(s.__str__(), '[Square] (21) 2/0 - 1')
 
   def test_created(self):
       """Test of Square.create(**{ 'id': 89 }) in Square exists"""
