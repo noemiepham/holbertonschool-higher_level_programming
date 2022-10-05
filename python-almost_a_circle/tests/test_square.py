@@ -39,6 +39,10 @@ class TestSquare(unittest.TestCase):
       with self.assertRaises(ValueError):
            Square(0)
 
+  def test_dictionary(self):
+      s1 = Square(10, 2, 1, 1)
+      s1_dict = s1.to_dictionary()
+      self.assertEqual(s1_dict, {'id': 1, 'x': 2, 'size': 10, 'y': 1})
 
   def test_case_normal(self):
       """Test of Square(1, 2, 3, 4) exists"""
