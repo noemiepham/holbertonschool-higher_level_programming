@@ -80,7 +80,7 @@ class TestSquare(unittest.TestCase):
         """Test str"""
 
         s = Square(1, 2)
-        self.assertEqual(s.__str__(), '[Square] (24) 2/0 - 1')
+        self.assertEqual(s.__str__(), '[Square] (23) 2/0 - 1')
 
     def test_created(self):
         """Test of Square.create(**{ 'id': 89 }) in Square exists"""
@@ -112,10 +112,7 @@ class TestSquare(unittest.TestCase):
 
     def test_save_to_file(self):
       """Test of Square.save_to_file(None) in Square exists"""
-      s1 = Square(4)
-      s2 = Square(3)
-      list_square = [s1, s2]
-      Square.save_to_file(list_square)
+      Square.save_to_file([Square(1)])
       self.assertTrue(os.path.isfile('Square.json'))
 
     def test_save_to_file_empty(self):
