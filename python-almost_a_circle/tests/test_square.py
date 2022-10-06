@@ -112,13 +112,5 @@ class TestSquare(unittest.TestCase):
 
         """Test of Square.save_to_file([]) in Square exists"""
 
-    def test_save_to_file(self):
-        r1 = Square(10, 7, 2, 8)
-        r2 = Square(2, 4)
-        Square.save_to_file(None)
-
-
-
-
 if __name__ == "__main__":
     unittest.main()
