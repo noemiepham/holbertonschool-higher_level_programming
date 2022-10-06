@@ -80,7 +80,7 @@ class TestSquare(unittest.TestCase):
         """Test str"""
 
         s = Square(1, 2)
-        self.assertEqual(s.__str__(), '[Square] (22) 2/0 - 1')
+        self.assertEqual(s.__str__(), '[Square] (24) 2/0 - 1')
 
     def test_created(self):
         """Test of Square.create(**{ 'id': 89 }) in Square exists"""
@@ -103,14 +103,21 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s.y, 3)
 
     def test_load_from_file(self):
-        """Test of Square.save_to_file(None) in Square exists"""
+        """Test of Square.load_from_file(None) in Square exists"""
         Square.save_to_file(None)
         self.assertTrue(os.path.isfile('Square.json'))
 
         load_file = Square.load_from_file()
         self.assertEqual(len(load_file), 0)
 
-        """Test of Square.save_to_file([]) in Square exists"""
+    def test_save_to_file(self):
+      """Test of Square.save_to_file(None) in Square exists"""
+      s1 = Square(4)
+      s2 = Square(3)
+      list_square = [s1, s2]
+      Square.save_to_file(list_square)
+      self.assertTrue(os.path.isfile('Square.json'))
+
 
 if __name__ == "__main__":
     unittest.main()
