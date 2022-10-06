@@ -149,8 +149,7 @@ class TestSquare(unittest.TestCase):
       """Test of Square.save_to_file([]) in Square exists"""
       Rectangle.save_to_file([])
       with open("Rectangle.json", mode="r") as read_file:
-        s = read_file.read()
-        self.assertEqual(s, "[]")
+        self.assertEqual("[]", read_file.read())
 
 
     def test_save_to_file_empty_r(self):
@@ -165,6 +164,11 @@ class TestSquare(unittest.TestCase):
       """Test of Square.save_to_file([]) in Square exists"""
       with self.assertRaises(TypeError):
         Rectangle.save_to_file()
+
+    def test_two_args(self):
+      """test two args"""
+      with self.assertRaises(TypeError):
+        Square.save_to_file([], 2)
 
 
 if __name__ == "__main__":
