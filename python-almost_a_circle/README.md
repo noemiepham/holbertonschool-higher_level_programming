@@ -84,8 +84,6 @@ At the end of this project, you are expected to be able to  [explain to anyone](
 
 ### 0. If it's not tested it doesn't work
 
-mandatory
-
 All your files, classes and methods must be unit tested and be PEP 8 validated.
 
 ```
@@ -103,19 +101,8 @@ guillaume@ubuntu:~/$
 
 _Note that this is just an example. The number of tests you create can be different from the above example._
 
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `tests/`
-
-Help  Check your code  Get a sandbox
-
-**0/83** pts
 
 ### 1. Base class
-
-mandatory
 
 Write the first class  `Base`:
 
@@ -164,19 +151,7 @@ guillaume@ubuntu:~/$
 
 ```
 
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/base.py, models/__init__.py`
-
-Help  Check your code  Get a sandbox
-
-**0/21** pts
-
 ### 2. First Rectangle
-
-mandatory
 
 Write the class  `Rectangle`  that inherits from  `Base`:
 
@@ -220,15 +195,6 @@ guillaume@ubuntu:~/$
 
 ```
 
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/rectangle.py`
-
-Help  Check your code  Get a sandbox
-
-**0/37** pts
 
 ### 3. Validate attributes
 
@@ -279,19 +245,9 @@ guillaume@ubuntu:~/$
 
 ```
 
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/rectangle.py`
-
-Help  Check your code  Get a sandbox
-
-**0/65** pts
 
 ### 4. Area first
 
-mandatory
 
 Update the class  `Rectangle`  by adding the public method  `def area(self):`  that returns the area value of the  `Rectangle`  instance.
 
@@ -320,19 +276,8 @@ guillaume@ubuntu:~/$
 
 ```
 
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/rectangle.py`
-
-Help  Check your code  Get a sandbox
-
-**0/17** pts
-
 ### 5. Display #0
 
-mandatory
 
 Update the class  `Rectangle`  by adding the public method  `def display(self):`  that prints in stdout the  `Rectangle`  instance with the character  `#`  - you don’t need to handle  `x`  and  `y`  here.
 
@@ -366,19 +311,9 @@ guillaume@ubuntu:~/$
 
 ```
 
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/rectangle.py`
-
-Help  Check your code  Get a sandbox
-
-**0/25** pts
 
 ### 6. __str__
 
-mandatory
 
 Update the class  `Rectangle`  by overriding the  `__str__`  method so that it returns  `[Rectangle] (<id>) <x>/<y> - <width>/<height>`
 
@@ -403,19 +338,7 @@ guillaume@ubuntu:~/$
 
 ```
 
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/rectangle.py`
-
-Help  Check your code  Get a sandbox
-
-**0/21** pts
-
 ### 7. Display #1
-
-mandatory
 
 Update the class  `Rectangle`  by improving the public method  `def display(self):`  to print in stdout the  `Rectangle`  instance with the character  `#`  by taking care of  `x`  and  `y`
 
@@ -447,20 +370,8 @@ $
 guillaume@ubuntu:~/$ 
 
 ```
-
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/rectangle.py`
-
-Help  Check your code  Get a sandbox
-
-**0/17** pts
-
 ### 8. Update #0
 
-mandatory
 
 Update the class  `Rectangle`  by adding the public method  `def update(self, *args):`  that assigns an argument to each attribute:
 
@@ -509,19 +420,8 @@ guillaume@ubuntu:~/$
 
 ```
 
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/rectangle.py`
-
-Help  Check your code  Get a sandbox
-
-**0/24** pts
-
 ### 9. Update #1
 
-mandatory
 
 Update the class  `Rectangle`  by updating the public method  `def update(self, *args):`  by changing the prototype to  `update(self, *args, **kwargs)`  that assigns a key/value argument to attributes:
 
@@ -564,20 +464,7 @@ guillaume@ubuntu:~/$ ./8-main.py
 guillaume@ubuntu:~/$ 
 
 ```
-
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/rectangle.py`
-
-Help  Check your code  Get a sandbox
-
-**0/41** pts
-
 ### 10. And now, the Square!
-
-mandatory
 
 Write the class  `Square`  that inherits from  `Rectangle`:
 
@@ -643,20 +530,7 @@ guillaume@ubuntu:~/$ ./9-main.py
 guillaume@ubuntu:~/$ 
 
 ```
-
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/square.py`
-
-Help  Check your code  Get a sandbox
-
-**0/33** pts
-
 ### 11. Square size
-
-mandatory
 
 Update the class  `Square`  by adding the public getter and setter  `size`
 
@@ -690,20 +564,7 @@ guillaume@ubuntu:~/$ ./10-main.py
 guillaume@ubuntu:~/$ 
 
 ```
-
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/square.py`
-
-Help  Check your code  Get a sandbox
-
-**0/17** pts
-
 ### 12. Square update
-
-mandatory
 
 Update the class  `Square`  by adding the public method  `def update(self, *args, **kwargs)`  that assigns attributes:
 
@@ -761,19 +622,7 @@ guillaume@ubuntu:~/$
 
 ```
 
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/square.py`
-
-Help  Check your code  Get a sandbox
-
-**0/37** pts
-
 ### 13. Rectangle instance to dictionary representation
-
-mandatory
 
 Update the class  `Rectangle`  by adding the public method  `def to_dictionary(self):`  that returns the dictionary representation of a  `Rectangle`:
 
@@ -815,20 +664,7 @@ False
 guillaume@ubuntu:~/$ 
 
 ```
-
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/rectangle.py`
-
-Help  Check your code  Get a sandbox
-
-**0/33** pts
-
 ### 14. Square instance to dictionary representation
-
-mandatory
 
 Update the class  `Square`  by adding the public method  `def to_dictionary(self):`  that returns the dictionary representation of a  `Square`:
 
@@ -869,20 +705,7 @@ False
 guillaume@ubuntu:~/$ 
 
 ```
-
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/square.py`
-
-Help  Check your code  Get a sandbox
-
-**0/29** pts
-
 ### 15. Dictionary to JSON string
-
-mandatory
 
 JSON is one of the standard formats for sharing data representation.
 
@@ -917,20 +740,7 @@ guillaume@ubuntu:~/$ ./14-main.py
 guillaume@ubuntu:~/$ 
 
 ```
-
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/base.py`
-
-Help  Check your code  Get a sandbox
-
-**0/33** pts
-
 ### 16. JSON string to file
-
-mandatory
 
 Update the class  `Base`  by adding the class method  `def save_to_file(cls, list_objs):`  that writes the JSON string representation of  `list_objs`  to a file:
 
@@ -960,20 +770,7 @@ guillaume@ubuntu:~/$ ./15-main.py
 guillaume@ubuntu:~/$ 
 
 ```
-
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/base.py`
-
-Help  Check your code  Get a sandbox
-
-**0/37** pts
-
 ### 17. JSON string to dictionary
-
-mandatory
 
 Update the class  `Base`  by adding the static method  `def from_json_string(json_string):`  that returns the list of the JSON string representation  `json_string`:
 
@@ -1006,20 +803,7 @@ guillaume@ubuntu:~/$ ./16-main.py
 guillaume@ubuntu:~/$ 
 
 ```
-
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/base.py`
-
-Help  Check your code  Get a sandbox
-
-**0/29** pts
-
 ### 18. Dictionary to Instance
-
-mandatory
 
 Update the class  `Base`  by adding the class method  `def create(cls, **dictionary):`  that returns an instance with all attributes already set:
 
@@ -1056,19 +840,7 @@ guillaume@ubuntu:~/$
 
 ```
 
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/base.py`
-
-Help  Check your code  Get a sandbox
-
-**0/37** pts
-
 ### 19. File to instances
-
-mandatory
 
 Update the class  `Base`  by adding the class method  `def load_from_file(cls):`  that returns a list of instances:
 
@@ -1137,17 +909,6 @@ guillaume@ubuntu:~/$ ./18-main.py
 guillaume@ubuntu:~/$ 
 
 ```
-
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/base.py`
-
-Help  Check your code  Get a sandbox
-
-**0/33** pts
-
 ### 20. JSON ok, but CSV?
 
 #advanced
@@ -1203,32 +964,3 @@ if __name__ == "__main__":
 
     for square in list_squares_output:
         print("[{}] {}".format(id(square), square))
-
-guillaume@ubuntu:~/$ ./100-main.py
-[140268695797600] [Rectangle] (1) 2/8 - 10/7
-[140268695797656] [Rectangle] (2) 0/0 - 2/4
----
-[140268695529008] [Rectangle] (1) 2/8 - 10/7
-[140268695528952] [Rectangle] (2) 0/0 - 2/4
----
----
-[140268695822520] [Square] (5) 0/0 - 5
-[140268695826328] [Square] (6) 9/1 - 7
----
-[140268695529232] [Square] (5) 0/0 - 5
-[140268695529176] [Square] (6) 9/1 - 7
-guillaume@ubuntu:~/$ 
-
-```
-
-**Repo:**
-
--   GitHub repository:  `holbertonschool-higher_level_programming`
--   Directory:  `python-almost_a_circle`
--   File:  `models/`
-
-Help  Check your code  Get a sandbox
-
-**0/17** pts
-
-
