@@ -5,6 +5,7 @@ from unittest import mock
 import io
 import os
 from models.square import Square
+from models.rectangle import Rectangle
 
 
 class TestSquare(unittest.TestCase):
@@ -132,8 +133,38 @@ class TestSquare(unittest.TestCase):
            self.assertEqual(len(s), 2)
     def test_save_to_file_none(self):
       """Test of Square.save_to_file([]) in Square exists"""
-      with self.assertRaises(Exception):
+      with self.assertRaises(TypeError):
           Square.save_to_file()
+
+
+    def test_save_to_file_r(self):
+      """Test of Square.save_to_file(None) in Square exists"""
+      Rectangle.save_to_file([Rectangle(1)])
+      with open("Square.json", mode="r") as read_file:
+        s = read_file.read()
+        self.assertEqual(len(s), 39)
+
+
+    def test_save_to_file_list_empty_r(self):
+      """Test of Square.save_to_file([]) in Square exists"""
+      Rectangle.save_to_file([])
+      with open("Rectangle.json", mode="r") as read_file:
+        s = read_file.read()
+        self.assertEqual(s, "[]")
+
+
+    def test_save_to_file_empty_r(self):
+      """Test of Square.save_to_file([]) in Square exists"""
+      Rectangle.save_to_file(None)
+      with open("Rectangle.json", mode="r") as read_file:
+        s = read_file.read()
+        self.assertEqual(len(s), 2)
+
+
+    def test_save_to_file_none_r(self):
+      """Test of Square.save_to_file([]) in Square exists"""
+      with self.assertRaises(TypeError):
+        Rectangle.save_to_file()
 
 
 if __name__ == "__main__":
