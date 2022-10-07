@@ -145,26 +145,26 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(len(s), 2)
 
 
-    def test_save_to_file_list_empty_r(self):
-      """Test of Square.save_to_file([]) in Square exists"""
-      Rectangle.save_to_file([])
-      with open("Rectangle.json", mode="r") as read_file:
-        s = read_file.read()
-        self.assertEqual(len(s), 2)
-
-
-    def test_save_to_file_empty_r(self):
-      """Test of Square.save_to_file([]) in Square exists"""
-      Rectangle.save_to_file(None)
-      with open("Rectangle.json", mode="r") as read_file:
-        s = read_file.read()
-        self.assertEqual(len(s), 2)
-
-
-    def test_save_to_file_none_r(self):
-      """Test of Square.save_to_file([]) in Square exists"""
-      with self.assertRaises(TypeError):
-        Rectangle.save_to_file()
+    # def test_save_to_file_list_empty_r(self):
+    #   """Test of Square.save_to_file([]) in Square exists"""
+    #   Rectangle.save_to_file([])
+    #   with open("Rectangle.json", mode="r") as read_file:
+    #     s = read_file.read()
+    #     self.assertEqual(len(s), 2)
+    #
+    #
+    # def test_save_to_file_empty_r(self):
+    #   """Test of Square.save_to_file([]) in Square exists"""
+    #   Rectangle.save_to_file(None)
+    #   with open("Rectangle.json", mode="r") as read_file:
+    #     s = read_file.read()
+    #     self.assertEqual(len(s), 2)
+    #
+    #
+    # def test_save_to_file_none_r(self):
+    #   """Test of Square.save_to_file([]) in Square exists"""
+    #   with self.assertRaises(TypeError):
+    #     Rectangle.save_to_file()
 
 
 if __name__ == "__main__":
