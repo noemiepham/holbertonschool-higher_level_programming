@@ -8,8 +8,8 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3], charset='utf8')
     cur = db.cursor()
     cur.execute("SELECT * FROM states \
-                         WHERE BINARY name = '{}'.format(sys.argv[4])\
-                         ORDER BY states.id")
+                         WHERE BINARY name = '{}' \
+                         ORDER BY states.id ".format(sys.argv[4]))
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
