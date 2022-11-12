@@ -1,10 +1,6 @@
 #!/usr/bin/python3
 """Write a script that changes the name
  of a State object from the database hbtn_0e_6_usa"""
-#!/usr/bin/python3
-"""Write a script that adds the
- State object “Louisiana” to the database hbtn_0e_6_usa
-"""
 import sys
 from model_state import State
 from sqlalchemy import create_engine
