@@ -1,12 +1,9 @@
 #!/usr/bin/python3
 """Write a script that prints
- the State object with the name passed as argument from the database hbtn_0e_6_usa
+ the State object with the name
+  passed as argument from the database hbtn_0e_6_usa
 
 """
-#!/usr/bin/python3
-"""Write a script that lists all State objects that contain the
- letter a from the database hbtn_0e_6_usa"""
-
 import sys
 from model_state import State
 from sqlalchemy import create_engine
