@@ -1,7 +1,6 @@
 #!/usr/bin/node
 
 class Rectangle {
-     // Class methods
-  constructor() {
-  }
+  // Class methods
 }
+module.exports = Rectangle;
