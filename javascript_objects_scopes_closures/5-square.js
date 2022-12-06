@@ -5,13 +5,14 @@ class Square extends Rectangle {
   constructor (size) {
     super(size);
     if (size && size >= 0) {
-      this.size = size;
+      this.width = size;
+      this.height = size
     }
   }
 
   print () {
-    for (let row = 0; row < this.size; row++) {
-      for (let col = 0; col < this.size; col++) {
+    for (let row = 0; row < this.width; row++) {
+      for (let col = 0; col < this.height; col++) {
         process.stdout.write('X');
       }
       console.log();
@@ -19,7 +20,8 @@ class Square extends Rectangle {
   }
 
   double () {
-    this.size = this.size * 2;
+    this.width = this.width * 2;
+    this.height = this.height * 2;
   }
 }
 module.exports = Square;
