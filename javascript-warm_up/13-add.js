@@ -5,5 +5,5 @@ module.exports = {
     return (a + b);
   }
 };
-//const add = require('./13-add').add;
-//console.log(add(4, 85));
+// const add = require('./13-add').add;
+// console.log(add(4, 85));
