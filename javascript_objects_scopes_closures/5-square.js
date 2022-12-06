@@ -6,7 +6,7 @@ class Square extends Rectangle {
     super(size);
     if (size && size >= 0) {
       this.width = size;
-      this.height = size
+      this.height = size;
     }
   }
 
