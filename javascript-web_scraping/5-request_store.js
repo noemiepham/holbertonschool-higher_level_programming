@@ -8,7 +8,7 @@ request(URL, function (error, response, data) {
   if (error) {
     console.log(error);
   } else {
-    fs.writeFile(FilePath, 'utf-8', function (err, data) {
+    fs.writeFile(FilePath, data, function (err) {
       if (err) {
         console.log(error);
       }
