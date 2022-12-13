@@ -10,7 +10,7 @@ request(PathUrl, function (error, request, data) {
   } else {
     for (const movie of JSON.parse(data).results) {
       for (const character of movie.characters) {
-        if (character.includes('1')) {
+        if (character.includes('18')) {
           counts++;
         }
       }
