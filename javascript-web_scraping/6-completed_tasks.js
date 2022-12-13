@@ -10,9 +10,9 @@ request(URL, function (error, response, data) {
     for (const task of JSON.parse(data)) {
       if (task.completed === true) {
         if (newDic[task.userId] === undefined) {
-          newDic[task.userId] = 0;
+          newDic[task.userId] = 1;
         } else {
-          newDic[task.userId]++;
+          newDic[task.userId] += 1;
         }
       }
     }
